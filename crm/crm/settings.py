@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-c)5g=9p(=!rwxdrs!80ijn90-j=z5ncd9j&oo0qd9oz_m0doef'
+SECRET_KEY = 'django-insecure-%@bo5g*16%i%4!iu3)78#h&4w_^d^)k2ei(a&5o+mw&d-czv%3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Main',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'crm.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'crm', 
+        'USER': 'postgres',
+        'PASSWORD': '2468',
+        'HOST': '127.0.0.1', 
+        'PORT': '5432',
     }
 }
 
